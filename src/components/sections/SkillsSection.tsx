@@ -27,10 +27,10 @@ export default function SkillsSection() {
     <section
       id="skills"
       aria-label="Technical Skills"
-      className="relative w-full max-w-[1862px] mx-auto px-6 sm:px-10 lg:px-14 py-24 border-t border-white/[0.06]"
+      className="relative w-full max-w-[1862px] mx-auto px-[clamp(1rem,3vw,3.5rem)] py-[clamp(3rem,6vh,6rem)] border-t border-white/[0.06]"
     >
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-white/[0.05]">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-[clamp(2rem,4vh,3.5rem)] pb-6 border-b border-white/[0.05] gap-4">
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#FF510B]" />
@@ -38,25 +38,25 @@ export default function SkillsSection() {
               TECHNICAL PROFICIENCIES
             </span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-[#F4F0E9]">
+          <h2 className="font-serif text-[clamp(1.75rem,4vw,3.25rem)] uppercase tracking-tight text-[#F4F0E9] leading-tight">
             SKILLS & ARCHITECTURAL TOOLING
           </h2>
         </div>
-        <p className="font-mono text-xs text-[#A7A7A7] uppercase tracking-[0.18em] mt-4 md:mt-0 max-w-sm">
+        <p className="font-mono text-[clamp(11px,0.8vw,13px)] text-[#A7A7A7] uppercase tracking-[0.18em] max-w-sm">
           Strictly verified engineering competencies across languages, graph stores, and intelligent pipelines.
         </p>
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[clamp(1rem,2vw,1.5rem)]">
         {skills.map((skillGroup) => (
           <div
             key={skillGroup.category}
-            className="p-6 rounded-2xl bg-[#0e0e0e]/70 border border-white/[0.08] hover:border-[#FF510B]/40 transition-all duration-300 backdrop-blur-sm"
+            className="p-[clamp(1.25rem,2vw,1.75rem)] rounded-2xl bg-[#0e0e0e]/70 border border-white/[0.08] hover:border-[#FF510B]/40 transition-all duration-300 backdrop-blur-sm min-w-0"
           >
-            <div className="flex items-center gap-2.5 mb-5 pb-3 border-b border-white/[0.06]">
+            <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-white/[0.06]">
               {getCategoryIcon(skillGroup.category)}
-              <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-[#F4F0E9] font-medium">
+              <h3 className="font-mono text-[clamp(11px,0.85vw,12px)] uppercase tracking-[0.2em] text-[#F4F0E9] font-medium truncate">
                 {skillGroup.category}
               </h3>
             </div>
@@ -65,7 +65,7 @@ export default function SkillsSection() {
               {skillGroup.items.map((item) => (
                 <span
                   key={item}
-                  className="font-mono text-xs px-3 py-1.5 rounded-lg bg-[#141414] text-[#C4C0B8] border border-white/[0.05] hover:border-[#FF510B]/50 hover:text-white transition-colors"
+                  className="font-mono text-[clamp(11px,0.8vw,12px)] px-3 py-1.5 rounded-lg bg-[#141414] text-[#C4C0B8] border border-white/[0.05] hover:border-[#FF510B]/50 hover:text-white transition-colors"
                 >
                   {item}
                 </span>
@@ -77,4 +77,3 @@ export default function SkillsSection() {
     </section>
   );
 }
-

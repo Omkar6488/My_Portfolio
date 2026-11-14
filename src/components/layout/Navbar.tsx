@@ -13,7 +13,7 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30);
+      setIsScrolled(window.scrollY > 25);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -36,10 +36,10 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
   };
 
   return (
-    <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 sm:px-10 lg:px-14 pointer-events-none">
+    <header className="fixed top-[clamp(0.75rem,2vh,1.5rem)] left-0 right-0 z-50 flex justify-center px-[clamp(0.75rem,2.5vw,2.5rem)] pointer-events-none">
       <nav
         aria-label="Primary"
-        className={`pointer-events-auto w-full max-w-[1720px] flex items-center justify-between py-2.5 px-6 sm:px-8 rounded-full transition-all duration-300 ${
+        className={`pointer-events-auto w-full max-w-[min(1720px,94vw)] flex items-center justify-between py-[clamp(0.4rem,1vh,0.65rem)] px-[clamp(1rem,2vw,2rem)] rounded-full transition-all duration-300 ${
           isScrolled
             ? "bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/[0.12] shadow-[0_10px_35px_rgba(0,0,0,0.7)]"
             : "bg-[#0b0b0b]/75 backdrop-blur-md border border-white/[0.09]"
@@ -49,19 +49,19 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
         <a
           href="#hero"
           onClick={(e) => handleScrollTo(e, "#hero")}
-          className="group flex items-baseline gap-0.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF510B] rounded-full py-1"
+          className="group flex items-baseline gap-0.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF510B] rounded-full py-0.5"
         >
-          <span className="font-serif text-xl sm:text-[22px] font-normal tracking-tight text-[#F4F0E9] transition-transform duration-200 group-hover:scale-[1.01]">
+          <span className="font-serif text-[clamp(1.1rem,1.4vw,1.35rem)] font-normal tracking-tight text-[#F4F0E9] transition-transform duration-200 group-hover:scale-[1.01]">
             Omkar More
           </span>
-          <span className="font-serif text-xl sm:text-[22px] font-bold text-[#FF510B]">
+          <span className="font-serif text-[clamp(1.1rem,1.4vw,1.35rem)] font-bold text-[#FF510B]">
             .
           </span>
         </a>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-9">
-          <ul className="flex items-center gap-8">
+        {/* Desktop Links (Visible on lg+ displays, reflows to menu when space is restricted) */}
+        <div className="hidden lg:flex items-center gap-[clamp(1.5rem,2.5vw,2.5rem)]">
+          <ul className="flex items-center gap-[clamp(1.25rem,2vw,2rem)]">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -69,7 +69,7 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
                   <a
                     href={link.href}
                     onClick={(e) => handleScrollTo(e, link.href)}
-                    className={`font-sans text-[13px] tracking-normal transition-colors duration-200 relative py-1 ${
+                    className={`font-sans text-[clamp(12px,0.85vw,13.5px)] tracking-normal transition-colors duration-200 relative py-1 ${
                       isActive
                         ? "text-[#F4F0E9] font-medium"
                         : "text-[#A7A7A7] hover:text-[#F4F0E9]"
@@ -89,15 +89,15 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
           <a
             href="#contact"
             onClick={(e) => handleScrollTo(e, "#contact")}
-            className="group relative inline-flex items-center gap-2 px-6 py-2 rounded-full font-sans text-xs tracking-wide text-[#F4F0E9] bg-transparent border border-white/[0.22] hover:border-[#FF510B] hover:bg-[#FF510B]/10 hover:shadow-[0_0_15px_rgba(255,81,11,0.25)] transition-all duration-300"
+            className="group relative inline-flex items-center gap-1.5 px-[clamp(1rem,1.5vw,1.5rem)] py-[clamp(0.35rem,0.8vh,0.5rem)] rounded-full font-sans text-[clamp(11px,0.8vw,12.5px)] tracking-wide text-[#F4F0E9] bg-transparent border border-white/[0.22] hover:border-[#FF510B] hover:bg-[#FF510B]/10 hover:shadow-[0_0_15px_rgba(255,81,11,0.25)] transition-all duration-300"
           >
             <span>Let&apos;s talk</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-[#F4F0E9] group-hover:text-[#FF510B] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
-        {/* Mobile Hamburger Toggle */}
-        <div className="flex md:hidden items-center gap-2">
+        {/* Mobile / Tablet Compact Toggle */}
+        <div className="flex lg:hidden items-center gap-2">
           <a
             href="#contact"
             onClick={(e) => handleScrollTo(e, "#contact")}
@@ -109,7 +109,7 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-[#A7A7A7] hover:text-[#F4F0E9] focus:outline-none"
+            className="p-1.5 text-[#A7A7A7] hover:text-[#F4F0E9] focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -119,7 +119,7 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#080808]/95 backdrop-blur-2xl flex flex-col items-center justify-center pointer-events-auto md:hidden px-6">
+        <div className="fixed inset-0 z-40 bg-[#080808]/95 backdrop-blur-2xl flex flex-col items-center justify-center pointer-events-auto lg:hidden px-6">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(false)}

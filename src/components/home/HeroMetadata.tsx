@@ -9,18 +9,18 @@ interface HeroMetadataProps {
 
 export function HeroMetadataLeft() {
   return (
-    <div className="hidden lg:flex flex-col justify-between h-full py-4 z-20 pointer-events-auto select-none">
+    <div className="hidden xl:flex flex-col justify-between h-full py-4 z-20 pointer-events-auto select-none min-w-[200px] max-w-[260px]">
       {/* Upper Left */}
       <div className="flex items-center gap-2">
         <span className="w-1.5 h-1.5 rounded-full bg-[#FF510B]" />
-        <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#A7A7A7]">
+        <span className="font-mono text-[clamp(9px,0.8vw,11px)] uppercase tracking-[0.22em] text-[#A7A7A7]">
           ENGINEER. DEVELOPER. BUILDER.
         </span>
       </div>
 
       {/* Middle Left */}
-      <div className="flex flex-col items-start space-y-3.5 my-auto">
-        <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#FF510B] font-medium">
+      <div className="flex flex-col items-start space-y-3 my-auto">
+        <span className="font-mono text-[clamp(10px,0.85vw,11px)] uppercase tracking-[0.22em] text-[#FF510B] font-medium">
           01 / PRESENCE
         </span>
 
@@ -28,7 +28,7 @@ export function HeroMetadataLeft() {
           +
         </span>
 
-        <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#A7A7A7] space-y-1.5 leading-tight">
+        <div className="font-mono text-[clamp(9px,0.8vw,11px)] uppercase tracking-[0.22em] text-[#A7A7A7] space-y-1.5 leading-tight">
           <p className="hover:text-[#F4F0E9] transition-colors">TECHNOLOGY</p>
           <p className="hover:text-[#F4F0E9] transition-colors">CREATIVITY</p>
           <p className="hover:text-[#F4F0E9] transition-colors">REAL IMPACT</p>
@@ -38,7 +38,7 @@ export function HeroMetadataLeft() {
       {/* Bottom Left */}
       <a
         href="#work"
-        className="group flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#A7A7A7] hover:text-[#F4F0E9] transition-colors cursor-pointer w-fit"
+        className="group flex items-center gap-2 font-mono text-[clamp(9px,0.8vw,11px)] uppercase tracking-[0.22em] text-[#A7A7A7] hover:text-[#F4F0E9] transition-colors cursor-pointer w-fit"
       >
         <span className="text-[#FF510B] font-bold">|</span>
         <span>SCROLL TO EXPLORE</span>
@@ -70,16 +70,16 @@ export function HeroMetadataRight({
   };
 
   return (
-    <div className="hidden lg:flex flex-col justify-between items-end h-full py-4 z-20 pointer-events-auto select-none">
+    <div className="hidden xl:flex flex-col justify-between items-end h-full py-4 z-20 pointer-events-auto select-none min-w-[200px] max-w-[260px]">
       {/* Upper Right */}
       <div className="text-right">
-        <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#A7A7A7]">
+        <span className="font-mono text-[clamp(9px,0.8vw,11px)] uppercase tracking-[0.22em] text-[#A7A7A7]">
           BASED IN INDIA • THINKING BEYOND
         </span>
       </div>
 
       {/* Middle Right: Exact Vertical Section Indicator */}
-      <div className="flex flex-col items-end space-y-3 my-auto">
+      <div className="flex flex-col items-end space-y-2.5 my-auto">
         {sections.map((sec) => {
           const isActive = activeSection === sec.id;
           return (
@@ -87,7 +87,7 @@ export function HeroMetadataRight({
               key={sec.id}
               type="button"
               onClick={() => handleSectionClick(sec.id)}
-              className="group flex items-center gap-2 font-mono text-[12px] tracking-[0.16em] transition-all duration-200 focus:outline-none"
+              className="group flex items-center gap-2 font-mono text-[clamp(10px,0.85vw,12px)] tracking-[0.16em] transition-all duration-200 focus:outline-none"
               title={sec.label}
             >
               <span
@@ -112,7 +112,7 @@ export function HeroMetadataRight({
       </div>
 
       {/* Bottom Right */}
-      <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#A7A7A7]">
+      <div className="flex items-center gap-2 font-mono text-[clamp(9px,0.8vw,11px)] uppercase tracking-[0.22em] text-[#A7A7A7]">
         <span>PORTFOLIO 2026</span>
         <span className="text-[#FF510B] font-bold tracking-widest">—</span>
       </div>
