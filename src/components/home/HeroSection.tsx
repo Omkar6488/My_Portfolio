@@ -68,8 +68,8 @@ export default function HeroSection({
               <HeroPortrait />
             </div>
 
-            {/* Layered Typography (Eyebrow starts cleanly from face bottom / neck under chin matching reference) */}
-            <div className="relative z-30 flex flex-col items-center w-full max-w-6xl mx-auto px-2 sm:px-4 -mt-[clamp(10.5rem,min(26vw,49vh),29rem)] min-w-0">
+            {/* Layered Typography (Nudged slightly lower so eyebrow and name sit cleanly across collar opening) */}
+            <div className="relative z-30 flex flex-col items-center w-full max-w-6xl mx-auto px-2 sm:px-4 -mt-[clamp(9.5rem,min(24vw,46.5vh),27rem)] min-w-0">
               {/* Eyebrow / Pre-kicker */}
               <p className="font-mono text-[clamp(10.5px,min(0.95vw,1.45vh),13.5px)] uppercase tracking-wider sm:tracking-[clamp(0.22em,0.34vw,0.3em)] text-[#D8D4CC] mb-[clamp(0.25rem,0.9vh,0.55rem)] drop-shadow-md select-none font-medium max-w-full truncate text-center">
                 A HUMAN PERSPECTIVE ON TECHNOLOGY
