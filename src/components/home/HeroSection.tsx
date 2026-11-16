@@ -33,7 +33,7 @@ export default function HeroSection({
     <section
       id="hero"
       aria-label="Omkar More Portfolio Hero"
-      className="relative w-full min-h-[100svh] flex flex-col justify-between pt-[clamp(4.25rem,7.5vh,6rem)] pb-[clamp(0.75rem,2vh,1.75rem)] px-[clamp(0.75rem,2.5vw,3rem)] overflow-hidden"
+      className="relative w-full min-h-[100svh] flex flex-col justify-between pt-[clamp(4.25rem,7vh,5.5rem)] pb-[clamp(0.75rem,2vh,1.75rem)] px-[clamp(0.75rem,2.5vw,3rem)] overflow-hidden"
     >
       {/* Max-Width Layout Frame corresponding to 1862px specification */}
       <div className="relative w-full max-w-[1862px] mx-auto h-full flex flex-col justify-between flex-1 min-w-0">
@@ -55,7 +55,7 @@ export default function HeroSection({
         </div>
 
         {/* Main Central Stage flanked by Independently Positioned Left & Right Metadata */}
-        <div className="relative w-full flex-1 flex flex-col items-center justify-center my-auto min-w-0">
+        <div className="relative w-full flex-1 flex flex-col items-center justify-start min-w-0">
           {/* Left Metadata Column (Positioned independently on the left grid margin) */}
           <div className="hidden xl:flex absolute left-0 top-0 bottom-0 z-20 pointer-events-auto">
             <HeroMetadataLeft />
@@ -63,13 +63,13 @@ export default function HeroSection({
 
           {/* Central Hero Stage: Perfectly Centered Relative to Full Viewport Width */}
           <div className="relative w-full flex flex-col items-center justify-center text-center px-2 py-1 min-w-0 z-10">
-            {/* Central Monochromatic Portrait */}
-            <div className="relative z-10 w-full flex justify-center">
+            {/* Central Monochromatic Portrait (Extended upwards closer to navigation) */}
+            <div className="relative z-10 w-full flex justify-center -mt-[clamp(1.5rem,3.5vh,3.5rem)]">
               <HeroPortrait />
             </div>
 
-            {/* Layered Typography (in front of lower chest of portrait) */}
-            <div className="relative z-30 flex flex-col items-center w-full max-w-5xl mx-auto px-2 sm:px-4 -mt-[clamp(3.5rem,min(11vw,18vh),11.5rem)] min-w-0">
+            {/* Layered Typography (Moved upwards ~8-10% vh to match original reference) */}
+            <div className="relative z-30 flex flex-col items-center w-full max-w-5xl mx-auto px-2 sm:px-4 -mt-[clamp(6.8rem,min(18vw,33vh),20.5rem)] min-w-0">
               {/* Eyebrow / Pre-kicker */}
               <p className="font-mono text-[clamp(10px,min(0.92vw,1.4vh),13px)] uppercase tracking-wider sm:tracking-[clamp(0.22em,0.34vw,0.3em)] text-[#D8D4CC] mb-[clamp(0.25rem,0.9vh,0.55rem)] drop-shadow-md select-none font-medium max-w-full truncate text-center">
                 A HUMAN PERSPECTIVE ON TECHNOLOGY
