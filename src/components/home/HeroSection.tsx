@@ -85,8 +85,8 @@ export default function HeroSection({
                 </span>
               </h1>
 
-              {/* Sub-headline (Bolder with high readability) */}
-              <p className="font-sans text-[clamp(14.5px,min(1.2vw,2.1vh),19.5px)] text-[#E6E2D8] text-center max-w-[min(640px,92vw)] mx-auto mt-[clamp(0.5rem,1.4vh,1.1rem)] leading-relaxed font-semibold drop-shadow-sm px-2">
+              {/* Sub-headline (Matched to font-mono, letter-spacing, and restrained weight like the eyebrow) */}
+              <p className="font-mono text-[clamp(12px,min(0.95vw,1.6vh),15px)] text-[#D0CCC4] text-center max-w-[min(720px,94vw)] mx-auto mt-[clamp(0.6rem,1.5vh,1.2rem)] leading-relaxed font-normal tracking-[clamp(0.1em,0.16vw,0.18em)] drop-shadow-sm px-2">
                 Building intelligent products and digital experiences
                 <br className="hidden sm:inline" /> that solve real-world problems.
               </p>
