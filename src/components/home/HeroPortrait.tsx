@@ -28,16 +28,7 @@ export default function HeroPortrait() {
         transform: `translate3d(${offset.x}px, ${offset.y}px, 0)`,
       }}
     >
-      {/* Restrained subtle orange contour highlight strictly behind right edge of hair & shoulder */}
-      <div
-        className="absolute top-[10%] right-[15%] w-[clamp(120px,16vw,240px)] h-[clamp(200px,30vw,400px)] rounded-full pointer-events-none opacity-25 blur-xl"
-        style={{
-          background:
-            "radial-gradient(ellipse at 65% 45%, rgba(255, 81, 11, 0.35) 0%, rgba(255, 81, 11, 0.08) 50%, transparent 75%)",
-        }}
-      />
-
-      {/* Prominent Central Portrait (Enlarged to match original reference width & shoulder span) */}
+      {/* Prominent Central Portrait (Pure dark obsidian background without artificial glow) */}
       <Image
         src="/images/omkar-portrait.png"
         alt="Omkar More — Portrait"
