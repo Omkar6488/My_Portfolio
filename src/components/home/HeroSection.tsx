@@ -33,7 +33,7 @@ export default function HeroSection({
     <section
       id="hero"
       aria-label="Omkar More Portfolio Hero"
-      className="relative w-full min-h-[100svh] flex flex-col justify-between pt-[clamp(4.25rem,7vh,5.5rem)] pb-[clamp(0.75rem,2vh,1.75rem)] px-[clamp(0.75rem,2.5vw,3rem)] overflow-hidden"
+      className="relative w-full min-h-[100svh] flex flex-col justify-between pt-[clamp(1.5rem,2.5vh,2.5rem)] pb-[clamp(0.75rem,2vh,1.75rem)] px-[clamp(0.75rem,2.5vw,3rem)] overflow-hidden"
     >
       {/* Max-Width Layout Frame corresponding to 1862px specification */}
       <div className="relative w-full max-w-[1862px] mx-auto h-full flex flex-col justify-between flex-1 min-w-0">
@@ -56,39 +56,39 @@ export default function HeroSection({
 
         {/* Main Central Stage flanked by Independently Positioned Left & Right Metadata */}
         <div className="relative w-full flex-1 flex flex-col items-center justify-start min-w-0">
-          {/* Left Metadata Column (Positioned independently on the left grid margin) */}
-          <div className="hidden xl:flex absolute left-0 top-0 bottom-0 z-20 pointer-events-auto">
+          {/* Left Metadata Column (Pinned below navbar so it starts cleanly at ~y=110px) */}
+          <div className="hidden xl:flex absolute left-0 top-[clamp(5.25rem,9vh,7rem)] bottom-[clamp(1rem,2vh,2rem)] z-20 pointer-events-auto">
             <HeroMetadataLeft />
           </div>
 
           {/* Central Hero Stage: Perfectly Centered Relative to Full Viewport Width */}
           <div className="relative w-full flex flex-col items-center justify-center text-center px-2 py-1 min-w-0 z-10">
-            {/* Central Monochromatic Portrait (Extended upwards closer to navigation) */}
-            <div className="relative z-10 w-full flex justify-center -mt-[clamp(1.5rem,3.5vh,3.5rem)]">
+            {/* Central Monochromatic Portrait (Extended upwards behind navigation capsule) */}
+            <div className="relative z-10 w-full flex justify-center -mt-[clamp(0.5rem,1.5vh,1.5rem)]">
               <HeroPortrait />
             </div>
 
-            {/* Layered Typography (Moved upwards ~8-10% vh to match original reference) */}
-            <div className="relative z-30 flex flex-col items-center w-full max-w-5xl mx-auto px-2 sm:px-4 -mt-[clamp(6.8rem,min(18vw,33vh),20.5rem)] min-w-0">
+            {/* Layered Typography (Elevated to overlap lower neck / collar area matching reference Y=460) */}
+            <div className="relative z-30 flex flex-col items-center w-full max-w-6xl mx-auto px-2 sm:px-4 -mt-[clamp(10.5rem,min(26vw,47.5vh),28rem)] min-w-0">
               {/* Eyebrow / Pre-kicker */}
-              <p className="font-mono text-[clamp(10px,min(0.92vw,1.4vh),13px)] uppercase tracking-wider sm:tracking-[clamp(0.22em,0.34vw,0.3em)] text-[#D8D4CC] mb-[clamp(0.25rem,0.9vh,0.55rem)] drop-shadow-md select-none font-medium max-w-full truncate text-center">
+              <p className="font-mono text-[clamp(10.5px,min(0.95vw,1.45vh),13.5px)] uppercase tracking-wider sm:tracking-[clamp(0.22em,0.34vw,0.3em)] text-[#D8D4CC] mb-[clamp(0.25rem,0.9vh,0.55rem)] drop-shadow-md select-none font-medium max-w-full truncate text-center">
                 A HUMAN PERSPECTIVE ON TECHNOLOGY
               </p>
 
-              {/* Main Headline: OMKAR MORE (+30% visual scale, exact viewport horizontal center) */}
-              <h1 className="font-serif text-[clamp(2.5rem,min(8.6vw,14.5vh),9.5rem)] uppercase tracking-tight leading-[0.88] select-none text-center whitespace-normal sm:whitespace-nowrap max-w-full">
-                <span className="text-[#F4F0E9] drop-shadow-[0_4px_30px_rgba(0,0,0,0.92)] font-normal">
+              {/* Main Headline: OMKAR MORE (Substantial font-semibold editorial Bodoni Moda at ~16.5vh) */}
+              <h1 className="font-serif text-[clamp(2.75rem,min(9.8vw,16.5vh),10.5rem)] uppercase tracking-tight leading-[0.88] select-none text-center whitespace-normal sm:whitespace-nowrap max-w-full">
+                <span className="text-[#F4F0E9] drop-shadow-[0_4px_30px_rgba(0,0,0,0.92)] font-semibold">
                   OMKAR{" "}
                 </span>
-                <span className="bg-gradient-to-r from-[#FF510B] via-[#FF6A28] to-[#FF4500] bg-clip-text text-transparent font-normal drop-shadow-[0_0_45px_rgba(255,81,11,0.45)]">
+                <span className="bg-gradient-to-r from-[#FF510B] via-[#FF6A28] to-[#FF4500] bg-clip-text text-transparent font-semibold drop-shadow-[0_0_45px_rgba(255,81,11,0.45)]">
                   MORE
                 </span>
               </h1>
 
               {/* Sub-headline (~18-20px on desktop) */}
-              <p className="font-sans text-[clamp(14px,min(1.15vw,2vh),19px)] text-[#B8B4AC] text-center max-w-[min(640px,92vw)] mx-auto mt-[clamp(0.5rem,1.4vh,1.1rem)] leading-relaxed font-light drop-shadow-sm px-2">
+              <p className="font-sans text-[clamp(14.5px,min(1.2vw,2.1vh),19.5px)] text-[#C2BEB5] text-center max-w-[min(640px,92vw)] mx-auto mt-[clamp(0.5rem,1.4vh,1.1rem)] leading-relaxed font-light drop-shadow-sm px-2">
                 Building intelligent products and digital experiences
-                <br className="hidden sm:inline" /> that solve real world problems.
+                <br className="hidden sm:inline" /> that solve real-world problems.
               </p>
 
               {/* Call To Action Buttons */}
@@ -97,7 +97,7 @@ export default function HeroSection({
                 <a
                   href="#work"
                   onClick={(e) => handleScrollTo(e, "#work")}
-                  className="group relative inline-flex items-center gap-2.5 px-[clamp(1.35rem,2.2vw,2rem)] py-[clamp(0.52rem,1.1vh,0.74rem)] rounded-full font-sans text-[clamp(12.5px,0.92vw,14.5px)] text-[#F4F0E9] bg-[#121212]/95 backdrop-blur-md border border-white/[0.22] hover:border-[#FF510B] hover:bg-[#181818] hover:shadow-[0_0_24px_rgba(255,81,11,0.32)] transition-all duration-300"
+                  className="group relative inline-flex items-center gap-2.5 px-[clamp(1.4rem,2.3vw,2.2rem)] py-[clamp(0.56rem,1.2vh,0.8rem)] rounded-full font-sans text-[clamp(13px,0.95vw,15px)] text-[#F4F0E9] bg-[#121212]/95 backdrop-blur-md border border-white/[0.25] hover:border-[#FF510B] hover:bg-[#181818] hover:shadow-[0_0_24px_rgba(255,81,11,0.32)] transition-all duration-300"
                 >
                   <span>Explore my work</span>
                   <ArrowDown className="w-4 h-4 text-[#B5B0A6] group-hover:text-[#FF510B] transition-transform duration-200 group-hover:translate-y-1" />
@@ -107,7 +107,7 @@ export default function HeroSection({
                 <a
                   href="#contact"
                   onClick={(e) => handleScrollTo(e, "#contact")}
-                  className="group inline-flex items-center gap-1.5 font-sans text-[clamp(12.5px,0.92vw,14.5px)] text-[#F4F0E9] hover:text-[#FF510B] pb-1 border-b-2 border-[#FF510B]/70 hover:border-[#FF510B] transition-all duration-200"
+                  className="group inline-flex items-center gap-1.5 font-sans text-[clamp(13px,0.95vw,15px)] text-[#F4F0E9] hover:text-[#FF510B] pb-1 border-b-2 border-[#FF510B]/70 hover:border-[#FF510B] transition-all duration-200"
                 >
                   <span>Let&apos;s connect</span>
                   <ArrowUpRight className="w-4 h-4 text-[#FF510B] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -116,8 +116,8 @@ export default function HeroSection({
             </div>
           </div>
 
-          {/* Right Metadata Column (Positioned independently on the right grid margin) */}
-          <div className="hidden xl:flex absolute right-0 top-0 bottom-0 z-20 pointer-events-auto">
+          {/* Right Metadata Column (Pinned below navbar so it starts cleanly at ~y=110px) */}
+          <div className="hidden xl:flex absolute right-0 top-[clamp(5.25rem,9vh,7rem)] bottom-[clamp(1rem,2vh,2rem)] z-20 pointer-events-auto">
             <HeroMetadataRight
               activeSection={activeSection}
               onNavigateSection={onNavigateSection}

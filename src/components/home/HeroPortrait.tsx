@@ -37,14 +37,14 @@ export default function HeroPortrait() {
         }}
       />
 
-      {/* Prominent Central Portrait (Enlarged +20-25% to match original reference) */}
+      {/* Prominent Central Portrait (Enlarged to match original reference width & shoulder span) */}
       <Image
         src="/images/omkar-portrait.png"
         alt="Omkar More — Portrait"
         priority
         width={1309}
         height={1202}
-        className="w-[clamp(340px,min(62vw,89vh),940px)] h-auto max-h-[clamp(330px,89vh,800px)] object-contain object-top drop-shadow-[0_24px_65px_rgba(0,0,0,0.95)]"
+        className="w-[clamp(340px,min(75vw,115vh),1220px)] h-auto max-h-[clamp(380px,96vh,890px)] object-contain object-top drop-shadow-[0_24px_65px_rgba(0,0,0,0.95)]"
       />
     </div>
   );

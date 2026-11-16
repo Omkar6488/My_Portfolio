@@ -51,10 +51,10 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
           onClick={(e) => handleScrollTo(e, "#hero")}
           className="group flex items-baseline gap-0.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF510B] rounded-full py-0.5"
         >
-          <span className="font-serif text-[clamp(1.22rem,1.5vw,1.48rem)] font-normal tracking-tight text-[#F4F0E9] transition-transform duration-200 group-hover:scale-[1.01]">
+          <span className="font-serif text-[clamp(1.3rem,1.65vw,1.6rem)] font-medium tracking-tight text-[#F4F0E9] transition-transform duration-200 group-hover:scale-[1.01]">
             Omkar More
           </span>
-          <span className="font-serif text-[clamp(1.22rem,1.5vw,1.48rem)] font-bold text-[#FF510B]">
+          <span className="font-serif text-[clamp(1.3rem,1.65vw,1.6rem)] font-bold text-[#FF510B]">
             .
           </span>
         </a>
@@ -69,10 +69,10 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
                   <a
                     href={link.href}
                     onClick={(e) => handleScrollTo(e, link.href)}
-                    className={`font-sans text-[clamp(13px,0.92vw,14.5px)] tracking-normal transition-colors duration-200 relative py-1 ${
+                    className={`font-sans text-[clamp(13.5px,0.96vw,15.5px)] tracking-normal transition-colors duration-200 relative py-1 ${
                       isActive
                         ? "text-[#F4F0E9] font-medium"
-                        : "text-[#B5B0A6] hover:text-[#F4F0E9]"
+                        : "text-[#C2BEB5] hover:text-[#F4F0E9]"
                     }`}
                   >
                     {link.label}
@@ -89,7 +89,7 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
           <a
             href="#contact"
             onClick={(e) => handleScrollTo(e, "#contact")}
-            className="group relative inline-flex items-center gap-1.5 px-[clamp(1.15rem,1.6vw,1.65rem)] py-[clamp(0.42rem,0.9vh,0.58rem)] rounded-full font-sans text-[clamp(12px,0.85vw,13.5px)] tracking-wide text-[#F4F0E9] bg-transparent border border-[#FF510B]/60 hover:border-[#FF510B] hover:bg-[#FF510B]/10 hover:shadow-[0_0_18px_rgba(255,81,11,0.3)] transition-all duration-300"
+            className="group relative inline-flex items-center gap-1.5 px-[clamp(1.2rem,1.75vw,1.75rem)] py-[clamp(0.48rem,1vh,0.64rem)] rounded-full font-sans text-[clamp(12.5px,0.9vw,14px)] tracking-wide text-[#F4F0E9] bg-transparent border border-[#FF510B]/60 hover:border-[#FF510B] hover:bg-[#FF510B]/10 hover:shadow-[0_0_18px_rgba(255,81,11,0.3)] transition-all duration-300"
           >
             <span>Let&apos;s talk</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-[#F4F0E9] group-hover:text-[#FF510B] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
