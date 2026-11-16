@@ -63,8 +63,8 @@ export default function HeroSection({
 
           {/* Central Hero Stage: Perfectly Centered Relative to Full Viewport Width */}
           <div className="relative w-full flex flex-col items-center justify-center text-center px-2 py-1 min-w-0 z-10">
-            {/* Central Monochromatic Portrait (Extended upwards behind navigation capsule) */}
-            <div className="relative z-10 w-full flex justify-center -mt-[clamp(0.5rem,1.5vh,1.5rem)]">
+            {/* Central Monochromatic Portrait (Moved upper through transparent navbar) */}
+            <div className="relative z-10 w-full flex justify-center -mt-[clamp(3rem,5.5vh,4.8rem)]">
               <HeroPortrait />
             </div>
 

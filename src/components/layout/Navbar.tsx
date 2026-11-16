@@ -39,12 +39,29 @@ export default function Navbar({ activeSection = "hero" }: NavbarProps) {
     <header className="fixed top-[clamp(0.75rem,2vh,1.5rem)] left-0 right-0 z-50 flex justify-center px-[clamp(0.75rem,2.5vw,2.5rem)] pointer-events-none">
       <nav
         aria-label="Primary"
-        className={`pointer-events-auto w-full max-w-[min(1720px,94vw)] flex items-center justify-between py-[clamp(0.48rem,1vh,0.72rem)] px-[clamp(1.2rem,2.2vw,2.25rem)] rounded-full transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#0a0a0a]/92 backdrop-blur-xl border border-white/[0.14] shadow-[0_12px_40px_rgba(0,0,0,0.8)]"
-            : "bg-[#0b0b0b]/80 backdrop-blur-md border border-white/[0.11]"
-        }`}
+        className="pointer-events-auto relative w-full max-w-[min(1720px,94vw)] flex items-center justify-between py-[clamp(0.48rem,1vh,0.72rem)] px-[clamp(1.2rem,2.2vw,2.25rem)] rounded-full transition-all duration-300"
       >
+        {/* Navbar Capsule Shell / Background Layer */}
+        <div
+          className={`absolute inset-0 rounded-full transition-all duration-300 pointer-events-none -z-10 ${
+            isScrolled
+              ? "bg-[#0a0a0a]/92 backdrop-blur-xl border border-white/[0.14] shadow-[0_12px_40px_rgba(0,0,0,0.8)]"
+              : "border border-white/[0.08]"
+          }`}
+        >
+          {/* Transparent central cutout for portrait: blur & background only cover brand (left) and links (right) */}
+          {!isScrolled && (
+            <div
+              className="absolute inset-0 rounded-full bg-[#0b0b0b]/80 backdrop-blur-md"
+              style={{
+                maskImage:
+                  "linear-gradient(to right, black 0%, black 22%, transparent 32%, transparent 68%, black 78%, black 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, black 0%, black 22%, transparent 32%, transparent 68%, black 78%, black 100%)",
+              }}
+            />
+          )}
+        </div>
         {/* Brand / Logo */}
         <a
           href="#hero"
