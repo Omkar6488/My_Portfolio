@@ -54,13 +54,15 @@ export default function HeroSection({
           </div>
         </div>
 
-        {/* Main Central Stage flanked by Left & Right Metadata on xl+ displays */}
-        <div className="relative w-full flex-1 flex flex-col xl:flex-row items-center justify-between my-auto min-w-0">
-          {/* Left Metadata Column (Visible on xl+ displays) */}
-          <HeroMetadataLeft />
+        {/* Main Central Stage flanked by Independently Positioned Left & Right Metadata */}
+        <div className="relative w-full flex-1 flex flex-col items-center justify-center my-auto min-w-0">
+          {/* Left Metadata Column (Positioned independently on the left grid margin) */}
+          <div className="hidden xl:flex absolute left-0 top-0 bottom-0 z-20 pointer-events-auto">
+            <HeroMetadataLeft />
+          </div>
 
-          {/* Central Hero Stage: Portrait + Layered Headline + Subtitle + CTAs */}
-          <div className="relative flex-1 w-full max-w-[1140px] mx-auto flex flex-col items-center justify-center text-center px-2 py-1 min-w-0">
+          {/* Central Hero Stage: Perfectly Centered Relative to Full Viewport Width */}
+          <div className="relative w-full flex flex-col items-center justify-center text-center px-2 py-1 min-w-0 z-10">
             {/* Central Monochromatic Portrait */}
             <div className="relative z-10 w-full flex justify-center">
               <HeroPortrait />
@@ -69,11 +71,11 @@ export default function HeroSection({
             {/* Layered Typography (in front of lower chest of portrait) */}
             <div className="relative z-30 flex flex-col items-center w-full max-w-5xl mx-auto px-2 sm:px-4 -mt-[clamp(3.5rem,min(11vw,18vh),11.5rem)] min-w-0">
               {/* Eyebrow / Pre-kicker */}
-              <p className="font-mono text-[clamp(10px,min(0.92vw,1.4vh),13px)] uppercase tracking-wider sm:tracking-[clamp(0.22em,0.34vw,0.3em)] text-[#D8D4CC] mb-[clamp(0.25rem,0.9vh,0.55rem)] drop-shadow-md select-none font-medium max-w-full truncate">
+              <p className="font-mono text-[clamp(10px,min(0.92vw,1.4vh),13px)] uppercase tracking-wider sm:tracking-[clamp(0.22em,0.34vw,0.3em)] text-[#D8D4CC] mb-[clamp(0.25rem,0.9vh,0.55rem)] drop-shadow-md select-none font-medium max-w-full truncate text-center">
                 A HUMAN PERSPECTIVE ON TECHNOLOGY
               </p>
 
-              {/* Main Headline: OMKAR MORE (+30% visual scale) */}
+              {/* Main Headline: OMKAR MORE (+30% visual scale, exact viewport horizontal center) */}
               <h1 className="font-serif text-[clamp(2.5rem,min(8.6vw,14.5vh),9.5rem)] uppercase tracking-tight leading-[0.88] select-none text-center whitespace-normal sm:whitespace-nowrap max-w-full">
                 <span className="text-[#F4F0E9] drop-shadow-[0_4px_30px_rgba(0,0,0,0.92)] font-normal">
                   OMKAR{" "}
@@ -90,7 +92,7 @@ export default function HeroSection({
               </p>
 
               {/* Call To Action Buttons */}
-              <div className="flex flex-row items-center justify-center gap-[clamp(1rem,2vw,2rem)] mt-[clamp(0.65rem,1.6vh,1.45rem)] flex-wrap">
+              <div className="flex flex-row items-center justify-center gap-[clamp(1rem,2vw,2rem)] mt-[clamp(0.65rem,1.6vh,1.45rem)] flex-wrap pointer-events-auto">
                 {/* Primary CTA Button */}
                 <a
                   href="#work"
@@ -114,11 +116,13 @@ export default function HeroSection({
             </div>
           </div>
 
-          {/* Right Metadata Column (Visible on xl+ displays) */}
-          <HeroMetadataRight
-            activeSection={activeSection}
-            onNavigateSection={onNavigateSection}
-          />
+          {/* Right Metadata Column (Positioned independently on the right grid margin) */}
+          <div className="hidden xl:flex absolute right-0 top-0 bottom-0 z-20 pointer-events-auto">
+            <HeroMetadataRight
+              activeSection={activeSection}
+              onNavigateSection={onNavigateSection}
+            />
+          </div>
         </div>
 
         {/* Intermediate & Mobile Viewport Bottom Metadata Bar */}
