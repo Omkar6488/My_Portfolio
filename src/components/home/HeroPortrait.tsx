@@ -42,8 +42,8 @@ export default function HeroPortrait() {
         src="/images/omkar-portrait.png"
         alt="Omkar More — Portrait"
         priority
-        width={1309}
-        height={1202}
+        width={1302}
+        height={1208}
         className="w-[clamp(340px,min(75vw,115vh),1220px)] h-auto max-h-[clamp(380px,96vh,890px)] object-contain object-top drop-shadow-[0_24px_65px_rgba(0,0,0,0.95)]"
       />
     </div>
