@@ -75,18 +75,18 @@ export default function HeroSection({
                 A HUMAN PERSPECTIVE ON TECHNOLOGY
               </p>
 
-              {/* Main Headline: OMKAR MORE (Substantial font-semibold editorial Bodoni Moda at ~16.5vh) */}
+              {/* Main Headline: OMKAR MORE (Bolder editorial Bodoni Moda with faded-to-darker orange gradient) */}
               <h1 className="font-serif text-[clamp(2.75rem,min(9.8vw,16.5vh),10.5rem)] uppercase tracking-tight leading-[0.88] select-none text-center whitespace-normal sm:whitespace-nowrap max-w-full">
-                <span className="text-[#F4F0E9] drop-shadow-[0_4px_30px_rgba(0,0,0,0.92)] font-semibold">
+                <span className="text-[#F4F0E9] drop-shadow-[0_4px_30px_rgba(0,0,0,0.92)] font-bold">
                   OMKAR{" "}
                 </span>
-                <span className="bg-gradient-to-r from-[#FF510B] via-[#FF6A28] to-[#FF4500] bg-clip-text text-transparent font-semibold drop-shadow-[0_0_45px_rgba(255,81,11,0.45)]">
+                <span className="bg-gradient-to-r from-[#F6A572] via-[#FF5E18] to-[#D03000] bg-clip-text text-transparent font-bold drop-shadow-[0_0_45px_rgba(255,81,11,0.45)]">
                   MORE
                 </span>
               </h1>
 
-              {/* Sub-headline (~18-20px on desktop) */}
-              <p className="font-sans text-[clamp(14.5px,min(1.2vw,2.1vh),19.5px)] text-[#C2BEB5] text-center max-w-[min(640px,92vw)] mx-auto mt-[clamp(0.5rem,1.4vh,1.1rem)] leading-relaxed font-light drop-shadow-sm px-2">
+              {/* Sub-headline (Bolder with high readability) */}
+              <p className="font-sans text-[clamp(14.5px,min(1.2vw,2.1vh),19.5px)] text-[#E6E2D8] text-center max-w-[min(640px,92vw)] mx-auto mt-[clamp(0.5rem,1.4vh,1.1rem)] leading-relaxed font-semibold drop-shadow-sm px-2">
                 Building intelligent products and digital experiences
                 <br className="hidden sm:inline" /> that solve real-world problems.
               </p>
