@@ -63,13 +63,13 @@ export default function HeroSection({
 
           {/* Central Hero Stage: Perfectly Centered Relative to Full Viewport Width */}
           <div className="relative w-full flex flex-col items-center justify-center text-center px-2 py-1 min-w-0 z-10">
-            {/* Central Monochromatic Portrait (Moved upper through transparent navbar) */}
-            <div className="relative z-10 w-full flex justify-center -mt-[clamp(3rem,5.5vh,4.8rem)]">
+            {/* Central Monochromatic Portrait (Hair top reaches precisely the center line of the navbar Y≈44-45 without exiting above) */}
+            <div className="relative z-10 w-full flex justify-center -mt-[clamp(0.75rem,1.45vh,1.5rem)]">
               <HeroPortrait />
             </div>
 
             {/* Layered Typography (Eyebrow starts cleanly from face bottom / neck under chin matching reference) */}
-            <div className="relative z-30 flex flex-col items-center w-full max-w-6xl mx-auto px-2 sm:px-4 -mt-[clamp(7.5rem,min(21vw,39.5vh),23rem)] min-w-0">
+            <div className="relative z-30 flex flex-col items-center w-full max-w-6xl mx-auto px-2 sm:px-4 -mt-[clamp(10.5rem,min(26vw,49vh),29rem)] min-w-0">
               {/* Eyebrow / Pre-kicker */}
               <p className="font-mono text-[clamp(10.5px,min(0.95vw,1.45vh),13.5px)] uppercase tracking-wider sm:tracking-[clamp(0.22em,0.34vw,0.3em)] text-[#D8D4CC] mb-[clamp(0.25rem,0.9vh,0.55rem)] drop-shadow-md select-none font-medium max-w-full truncate text-center">
                 A HUMAN PERSPECTIVE ON TECHNOLOGY
